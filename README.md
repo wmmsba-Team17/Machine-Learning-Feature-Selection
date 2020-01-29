@@ -1,1 +1,3 @@
-# Machine-Learning-TP1
+# Machine Learning 
+# Feature Selection
+# Shrinkage and Dimension Reduction Apporaches 
