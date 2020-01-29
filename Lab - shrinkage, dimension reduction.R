@@ -43,7 +43,7 @@ ridge.pred <- predict(ridge.mod, s = 4, newx = x[test,]) #make prediction on tes
 mean((ridge.pred - y.test) ^ 2)   #calculate test MSE
 #Let's try just using mean of training observations instead of running regression model 
 mean((mean(y[train])-y.test)^2)
-#Calculate the MSE when lambda is a very large number, and beta towards zero on test set
+#Calculate the MSE when lambda is a very large number
 ridge.pred <- predict(ridge.mod, s = 1e10, newx = x[test, ]) #we chould also get the same result by using a very large lambda
 mean((ridge.pred - y.test)^2)
 #What if lambda is zero? 
