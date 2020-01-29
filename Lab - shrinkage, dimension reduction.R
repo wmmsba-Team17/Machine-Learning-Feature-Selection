@@ -30,7 +30,7 @@ sqrt(sum(coef(ridge.mod)[-1,50]^2))    #L2 norm coefficients
 #Let's try a different lambda! 
 ridge.mod$lambda[60] 
 coef(ridge.mod)[,60]                 
-sqrt(sum(coef(ridge.mod)[-1,60]^2))    #larger L2 norm coefficients associated with this smaller value of lambda 
+sqrt(sum(coef(ridge.mod)[-1,60]^2))    #larger L2 norm associated with this smaller value of lambda 
 
 predict(ridge.mod, s=grid[50], type='coefficients')[1:20,]  #can also use predict() to obtain the coefficients
 
