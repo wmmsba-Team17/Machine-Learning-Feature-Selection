@@ -53,6 +53,7 @@ mean((ridge.pred - y.test)^2)
 #Compare the coefficients created by lm() and glmnet(), and they wil be almost same 
 lm(y ~ x, subset = train)
 predict(ridge.mod, s = 0.01, exact = T, type = "coefficients")[1:20, ]   #penalty term has no effect when lambda is zero
+
 #Choose lambda with Cross-Validation
 set.seed(1)
 cv.out <- cv.glmnet(x[train, ], y[train], alpha = 0)  #this perform 10-fold cv by default 
