@@ -21,6 +21,7 @@ grid <- 10^seq(10,-2,length=100)
 ridge.mod <- glmnet(x,y,alpha=0,lambda=grid)  #alpha determines what type of model is fit
 #alpha=0 is the ridge penalty, alpha=1 is the lasso penalty
 dim(coef(ridge.mod))  #it should be a 20*100, let's check! 
+
 #Selecting a good value for lambda is critical! 
 ridge.mod$lambda[50]
 coef(ridge.mod)[,50]
